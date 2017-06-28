@@ -22,6 +22,7 @@ const Icon = ({ title, url }: IconPropsT) =>
       img {
         border-radius: 50%;
         width: 400px;
+        height: 400px;
       }
     `}</style>
   </div>
@@ -37,7 +38,12 @@ const Bio = ({ children }) =>
       flex-direction: column;
       box-sizing: border-box;
       width: 400px;
-      padding: 4rem 0rem;
+      padding: 4rem 0rem 0rem 0rem;
+      @media screen and (max-height: 850px) {
+        .bio {
+          padding: 0rem 0rem 0rem 4rem;
+        }
+      }
     `}</style>
   </div>
 
@@ -158,13 +164,19 @@ class Profile extends React.Component {
           flex: 1 auto;
           flex-direction: column;
           align-items: center;
+          justify-content: center;
           padding: 4rem;
           font-family: 'Raleway';
           font-weight: 100;
           box-sizing: border-box;
           color: #eee;
-          width: calc(400px + 4rem);
+          width: 100%;
           margin: auto;
+          @media screen and (max-height: 850px) {
+            .profile {
+              flex-direction: row;
+            }
+          }
         `}</style>
         {children}
       </div>

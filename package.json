@@ -9,6 +9,7 @@
     "gsap": "^1.19.1",
     "next": "beta",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "react-favicon": "^0.0.9"
   }
 }

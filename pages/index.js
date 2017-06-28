@@ -3,6 +3,7 @@
 import Head from 'next/head'
 import React from 'react'
 import { Elastic, Expo, TimelineLight, TweenMax } from 'gsap'
+import Favicon from 'react-favicon'
 
 /** Icon */
 
@@ -188,6 +189,11 @@ class Profile extends React.Component {
 
 export default () =>
   <div>
+    <Favicon
+      url={[
+        'https://pbs.twimg.com/profile_images/747365723203321856/P9gO00pv_400x400.jpg',
+      ]}
+    />
     <Head>
       <title>Jannis Pohlmann</title>
       <link

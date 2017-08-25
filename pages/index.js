@@ -232,7 +232,9 @@ export default () =>
         <Title text="Jannis Pohlmann" />
         <Subtitle>
           <div>Clojure &amp; ClojureScript Consultant.</div>
-          <div>Musician at <a href="https://soundcloud.com/maenadband">MÆNAD</a>.</div>
+          <div>
+            Musician at <a href="https://soundcloud.com/maenadband">MÆNAD</a>.
+          </div>
         </Subtitle>
         <Paragraph>
           I have been called many things. I think <em>beast</em> is my favorite.

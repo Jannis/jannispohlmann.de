@@ -232,6 +232,7 @@ export default () =>
         <Title text="Jannis Pohlmann" />
         <Subtitle>
           <div>Clojure &amp; ClojureScript Consultant.</div>
+          <div>Expert in web technologies.</div>
           <div>
             Musician at <a href="https://soundcloud.com/maenadband">MÆNAD</a>.
           </div>

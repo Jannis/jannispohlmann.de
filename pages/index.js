@@ -231,11 +231,8 @@ export default () =>
       <Bio>
         <Title text="Jannis Pohlmann" />
         <Subtitle>
-          <div>Clojure &amp; ClojureScript Consultant.</div>
-          <div>Expert in web technologies.</div>
-          <div>
-            Musician at <a href="https://soundcloud.com/maenadband">MÆNAD</a>.
-          </div>
+          <div>Tech Lead &amp; Co-Founder at <a href="https://thegraph.com">The Graph</a>.</div>
+          <div>Musician at <a href="https://soundcloud.com/maenadband">MÆNAD</a>.</div>
         </Subtitle>
         <Paragraph>
           I have been called many things. I think <em>beast</em> is my favorite.

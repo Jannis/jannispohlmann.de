@@ -227,7 +227,7 @@ export default () =>
       `}</style>
     </Head>
     <Profile>
-      <Icon url="https://pbs.twimg.com/profile_images/747365723203321856/P9gO00pv_400x400.jpg" />
+      <Icon url="https://pbs.twimg.com/profile_images/1055395046957043712/l0Tm_5Vm_400x400.jpg" />
       <Bio>
         <Title text="Jannis Pohlmann" />
         <Subtitle>

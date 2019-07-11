@@ -1,5 +1,3 @@
-/** @flow */
-
 import Head from 'next/head'
 import React from 'react'
 import { Elastic, Expo, TimelineLight, TweenMax } from 'gsap'
@@ -7,12 +5,7 @@ import Favicon from 'react-favicon'
 
 /** Icon */
 
-type IconPropsT = {
-  title: string,
-  url: string,
-}
-
-const Icon = ({ title, url }: IconPropsT) =>
+const Icon = ({ title, url }) => (
   <div className="icon">
     <img src={url} title={title} />
     <style jsx>{`
@@ -27,10 +20,11 @@ const Icon = ({ title, url }: IconPropsT) =>
       }
     `}</style>
   </div>
+)
 
 /** Bio */
 
-const Bio = ({ children }) =>
+const Bio = ({ children }) => (
   <div className="bio">
     {children}
     <style jsx>{`
@@ -47,14 +41,11 @@ const Bio = ({ children }) =>
       }
     `}</style>
   </div>
+)
 
 /** Title */
 
-type TitlePropsT = {
-  text: string,
-}
-
-const Title = ({ text }: TitlePropsT) =>
+const Title = ({ text }) => (
   <h1 className="title">
     {text}
     <style jsx>{`
@@ -64,14 +55,11 @@ const Title = ({ text }: TitlePropsT) =>
       margin: 0;
     `}</style>
   </h1>
+)
 
 /** Subtitle */
 
-type SubtitlePropsT = {
-  children: React$Children,
-}
-
-const Subtitle = ({ children }: SubtitlePropsT) =>
+const Subtitle = ({ children }) => (
   <h2 className="subtitle">
     {children}
     <style jsx>{`
@@ -81,17 +69,11 @@ const Subtitle = ({ children }: SubtitlePropsT) =>
       font-weight: 200;
     `}</style>
   </h2>
+)
 
 /** Paragraph */
 
-type ParagraphPropsT = {
-  children: React$Children,
-}
-
-const Paragraph = ({ children }: ParagraphPropsT) =>
-  <p className="paragraph">
-    {children}
-  </p>
+const Paragraph = ({ children }) => <p className="paragraph">{children}</p>
 
 /** Animation timeline */
 
@@ -145,13 +127,7 @@ const createTimeline = () => {
 
 /** Profile */
 
-type ProfilePropsT = {
-  children: React$Children,
-}
-
 class Profile extends React.Component {
-  props: ProfilePropsT
-
   componentDidMount() {
     createTimeline().resume()
   }
@@ -187,13 +163,9 @@ class Profile extends React.Component {
 
 /** Page */
 
-export default () =>
+export default () => (
   <div>
-    <Favicon
-      url={[
-        'https://pbs.twimg.com/profile_images/747365723203321856/P9gO00pv_400x400.jpg',
-      ]}
-    />
+    <Favicon url={['/static/Twitter-Avatar-2016.jpg']} />
     <Head>
       <title>Jannis Pohlmann</title>
       <link
@@ -204,7 +176,7 @@ export default () =>
         href="https://fonts.googleapis.com/css?family=Raleway:200,300,400"
         rel="stylesheet"
       />
-      <style global>{`
+      <style global="true">{`
         body { background-color: #272324; /* #2e292a; */ }
 
         em {
@@ -227,12 +199,16 @@ export default () =>
       `}</style>
     </Head>
     <Profile>
-      <Icon url="https://pbs.twimg.com/profile_images/1055395046957043712/l0Tm_5Vm_400x400.jpg" />
+      <Icon url="/static/Twitter-Avatar-2016.jpg" />
       <Bio>
         <Title text="Jannis Pohlmann" />
         <Subtitle>
-          <div>Tech Lead &amp; Co-Founder at <a href="https://thegraph.com">The Graph</a>.</div>
-          <div>Musician at <a href="https://soundcloud.com/maenadband">MÆNAD</a>.</div>
+          <div>
+            Tech Lead &amp; Co-Founder at <a href="https://thegraph.com">The Graph</a>.
+          </div>
+          <div>
+            Musician at <a href="https://soundcloud.com/maenadband">MÆNAD</a>.
+          </div>
         </Subtitle>
         <Paragraph>
           I have been called many things. I think <em>beast</em> is my favorite.
@@ -245,3 +221,4 @@ export default () =>
       </Bio>
     </Profile>
   </div>
+)
